@@ -1,0 +1,19 @@
+<!-- <h1>Welcome to SvelteKit</h1>
+<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p> -->
+
+<svelte:head>
+	<title>Jan Park: Personal site and portfolio</title>
+</svelte:head>
+
+<h1>Jan Park</h1>
+
+<img src="images/profilephoto.jpg" width=400px alt="Profile Photo of Jan Park">
+<p>
+    Master’s in Business Intelligence & Data Analytics at CMU | Corporate Loan Manager at Korea Development Bank | Financial Solutions, Project Management, Client Communication, Technology Assessment
+</p>
+
+
+<p>With over ten years of experience at Korea Development Bank, I have built a strong foundation in client communication, industry context absorption, and leveraging data to craft tailored financial solutions. As a Corporate Loan Manager, I successfully led a $200 million syndication loan arrangement, skillfully navigating the diverse needs of clients, partner institutions, internal stakeholders, and international regulatory frameworks.</p>
+<p>My passion for integrating financial expertise with technological innovation drove me to the role of Biotech Research Analyst. In this capacity, I conducted technology assessments and developed data-driven strategies for biotech and pharmaceutical clients. These efforts culminated in 30+ new investment partnerships, directly contributing to the bank’s growth and positioning it as a leader in biotechnology sector investment.</p>
+<p>In addition to my technical roles, I have played a key part in KDB’s recruitment initiatives, participating in the hiring process for over 280 employees. My commitment to excellence was recognized with the KDB Star Award and the Commendation by the chairman for outstanding performance and compliance.</p>
+<p>My mission has always been to connect finance and cutting-edge technological progress, driving impactful change across industries. Most recently, I am pursuing a Master of Information Systems Management at Carnegie Mellon University, specializing in Business Intelligence and Data Analytics, to sharpen my ability to interpret data and develop actionable insights. My diverse background allows me to collaborate effectively with clients, align stakeholder interests, and advance the organization's objectives through data-driven decisions.</p>

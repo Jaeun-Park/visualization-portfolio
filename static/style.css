@@ -1,0 +1,92 @@
+:root {
+  --color-accent: oklch(65% 50% 0); /* Define accent color */
+  --border-color: oklch(50% 10% 200 / 40%); /* Define border color */
+  color-scheme: light dark;
+}
+
+body {
+    accent-color: var(--color-accent); /* Accent color is allowed for all elements */
+    font: 100%/1.5 system-ui; /* Line height is 1.5 times the font size, website font uses OS’s UI font */
+    max-width: 100ch;
+    margin: auto;
+    padding: 1em;
+   }
+
+   /* Navigation styles */
+   nav {
+    display: flex;
+    margin-bottom: 1em; /* Space between the navigation and the content below */
+    border-bottom: 1px solid var(--border-color); /* Thick bottom border, Defined border color */
+  }
+
+  nav ul, li {
+    display: contents;
+  }
+
+  nav a {
+    flex: 1;
+    text-decoration: none;
+    color: inherit; /* Links inherit the text color from parent */
+    text-align: center; /* Text is centered within the link box */
+    padding: 0.5em; /* Link has inside paddings */
+  }
+
+  /* Current link styles*/
+  nav a.current {
+    border-bottom: 0.4em solid var(--border-color); /* Thick bottom border, Defined border color */
+    padding-bottom: 0.1em;  /* Reduced padding-bottom to counter the thick bottom border */
+  }
+
+  /* Hovered link styles: apply the accent color to the border-bottom */
+  nav a:hover {
+    border-bottom: 0.4em solid var(--color-accent); /* Accent color for hover */
+    /* background-color: oklch(from var(--color-accent) 95% 5% h); */
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+    padding-bottom: 0.1em;  /* Reduced padding-bottom to counter the thick bottom border */
+  }
+
+  /* Form styles */
+  form {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Two columns: labels and inputs */
+    gap: 1em;
+    font: inherit;
+    max-width: 100%; /* Form spans a whole row */
+  }
+
+  label {
+    grid-column: 1; /* Label elements are in the first column */
+    padding-right: 1em;  /* Space between label and input */
+  }
+
+  input, textarea {
+    grid-column: 2; /* Input and text area elements are in the second column */
+    width: 100%; /* Input and textarea take up full width of the column */
+    box-sizing: border-box; /* Padding and borders are included in the width */
+    font: inherit; /* Inherit font settings */
+  }
+
+  button {
+    grid-column: 1 / -1; /* Button spans across first and end column */
+    width: 100%; /* Button take up full width of two columns */
+    padding: 5px;
+    margin-top: 1em;
+    font: inherit; /* Inherit font settings */
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  /* Style the color scheme switcher */
+  .color-scheme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 80%; /* Make the font smaller */
+    font-family: inherit; /* Inherit the font-family from the parent */
+  }
+
+  .color-scheme select {
+    font: inherit; /* Inherit the font size and family */
+  }
