@@ -1,6 +1,6 @@
 <script>
-    import { page } from '$app/stores'; // Import the page store to access the current route
-
+    // import { page } from '$app/stores'; // Import the page store to access the current route
+    import { page, base } from '$app/stores'; // Import the base and page store
 
     let pages = [
 	    {url: "/", title: "Home"},
@@ -15,7 +15,7 @@
         <a href={p.url}
             target={p.url.startsWith("http") ? "_blank" : null}
             rel={p.url.startsWith("http") ? "noopener noreferrer" : null}
-            class:current={$page.url.pathname === p.url}>
+            class:current={$page.url.pathname === base + p.url}>
             {p.title}
         </a>
     {/each}
