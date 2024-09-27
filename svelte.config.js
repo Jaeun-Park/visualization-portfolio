@@ -10,9 +10,6 @@ const config = {
 			// Set the base path for GitHub Pages
 			base: process.argv.includes('dev') ? '' : '/visualization-portfolio'
 		},
-		prerender: {
-			default: true // Automatically prerender all pages
-		}
 	}
 };
 

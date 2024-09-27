@@ -9,7 +9,7 @@
     <!-- Use svelte:element to dynamically set the heading level -->
     <svelte:element this={"h" + hLevel}>{data.title}</svelte:element>
 
-    <img src="{data.image}" alt="">
+    <img src="{data.image}" alt="{data.title} project image" />
     <p>{data.description}</p>
 </article>
 
