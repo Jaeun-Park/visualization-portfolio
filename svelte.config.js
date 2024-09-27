@@ -8,7 +8,7 @@ const config = {
 		}),
 		paths: {
 			// Set the base path for GitHub Pages
-			base: process.env.NODE_ENV === 'production' ? '/visualization-portfolio' : ''
+			base: process.argv.includes('dev') ? '' : '/visualization-portfolio'
 		},
 		prerender: {
 			default: true // Automatically prerender all pages

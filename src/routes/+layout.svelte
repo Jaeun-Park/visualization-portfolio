@@ -15,7 +15,7 @@
       <a href={base + p.url}
           target={p.url.startsWith("http") ? "_blank" : null}
           rel={p.url.startsWith("http") ? "noopener noreferrer" : null}
-          class:current={$page.url.pathname === base + p.url}>
+          class:current={$page.url.pathname === (base + p.url)}>
           {p.title}
       </a>
   {/each}
@@ -30,9 +30,9 @@
       border-bottom: 1px solid var(--border-color);
     }
   
-    nav ul, li {
+    /* nav ul, li {
       display: contents;
-    }
+    } */
   
     nav a {
       flex: 1;
