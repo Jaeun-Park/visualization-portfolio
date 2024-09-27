@@ -10,6 +10,12 @@
         {url: "/contact", title: "Contact"},
         { url: "https://github.com/Jaeun-Park", title: "Profile" }
     ];
+
+    // Function to return the correct URL
+    function getUrl(p) {
+        // If the URL starts with 'http', it's an external link, so return it as is
+        return p.url.startsWith("http") ? p.url : base + p.url;
+    }
 </script>
 
 <nav>
