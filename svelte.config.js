@@ -10,7 +10,7 @@ const config = {
 			// base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
 
 			// Set the base path for GitHub Pages
-			base: process.argv.includes('dev') ? '' : '/your-repo-name'
+			base: process.argv.includes('dev') ? '' : '/visualization-portfolio'
 		}
 	}
 };
