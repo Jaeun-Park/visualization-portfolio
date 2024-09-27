@@ -1,6 +1,8 @@
 <script>
-    import { page } from '$app/stores'; // Import the page store to access the current route
+    // import { page } from '$app/stores'; // Import the page store to access the current route
     // import { page, base } from '$app/stores'; // Import the base and page store
+    import { page } from '$app/stores'; // For current route detection
+    import { base } from '$app/paths';  // Base path for GitHub Pages
 
     let pages = [
         {url: "/", title: "Home"},
@@ -12,10 +14,10 @@
 
 <nav>
   {#each pages as p}
-      <a href={p.url}
-          target={p.url.startsWith("http") ? "_blank" : null}
+      <a href={base + p.url} 
+          target={p.url.startsWith("http") ? "_blank" : null} 
           rel={p.url.startsWith("http") ? "noopener noreferrer" : null}
-          class:current={$page.url.pathname === p.url}>
+          class:current={$page.url.pathname === base + p.url}>
           {p.title}
       </a>
   {/each}
