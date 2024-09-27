@@ -1,4 +1,4 @@
-console.log("IT’S ALIVE!");
+console.log("JavaScript loaded");
 
 function $$ (selector, context = document) {
 	return Array.from(context.querySelectorAll(selector));
@@ -16,8 +16,8 @@ let pages = [
 ];
 
 // Create the <nav> element and add it to the body at the beginning
-let nav = document.createElement("nav");
-document.body.prepend(nav);
+// let nav = document.createElement("nav");
+// document.body.prepend(nav);
 
 // Use a for loop to iterate over the pages and create links
 for (let p of pages) {

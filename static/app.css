@@ -1,0 +1,86 @@
+:root {
+    --color-accent: oklch(65% 50% 0); /* Define accent color */
+    --border-color: oklch(50% 10% 200 / 40%); /* Define border color */
+    color-scheme: light dark;
+  }
+  
+  body {
+      accent-color: var(--color-accent);
+      font: 100%/1.5 system-ui;
+      max-width: 100ch;
+      margin: auto;
+      padding: 1em;
+  }
+/*   
+  nav {
+      display: flex;
+      margin-bottom: 1em;
+      border-bottom: 1px solid var(--border-color);
+  }
+  
+  nav ul, li {
+      display: contents;
+  }
+  
+  nav a {
+      flex: 1;
+      text-decoration: none;
+      color: inherit;
+      text-align: center;
+      padding: 0.5em;
+  }
+  
+  nav a.current {
+      border-bottom: 0.4em solid var(--border-color);
+      padding-bottom: 0.1em;
+  }
+  
+  nav a:hover {
+      border-bottom: 0.4em solid var(--color-accent);
+      background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+      padding-bottom: 0.1em;
+  }
+   */
+  form {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1em;
+      font: inherit;
+      max-width: 100%;
+  }
+  
+  label {
+      grid-column: 1;
+      padding-right: 1em;
+  }
+  
+  input, textarea {
+      grid-column: 2;
+      width: 100%;
+      box-sizing: border-box;
+      font: inherit;
+  }
+  
+  button {
+      grid-column: 1 / -1;
+      width: 100%;
+      padding: 5px;
+      margin-top: 1em;
+      font: inherit;
+  }
+  
+  img {
+      max-width: 100%;
+  }
+  
+  .color-scheme {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 80%;
+      font-family: inherit;
+  }
+  
+  .color-scheme select {
+      font: inherit;
+  }
