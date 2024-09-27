@@ -7,7 +7,10 @@ const config = {
 			fallback: '404.html'
 		}),
 		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+			// base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+
+			// Set the base path for GitHub Pages
+			base: process.argv.includes('dev') ? '' : '/your-repo-name'
 		}
 	}
 };
