@@ -15,11 +15,11 @@
         {/each}
     </div>
 
-<!-- <style>
+<style>
     .projects { /* Layout of the project list */
       display: flex;
       gap: 1rem; /* Space between the project items */
       justify-content: space-between; /* Space items evenly */
       flex-wrap: wrap; /* Allows items to wrap if necessary */
     }
-</style> -->
+</style>

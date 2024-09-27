@@ -30,7 +30,7 @@
         {/each}
     </div>
 
-<!-- 
+
 <style>
     .projects { /* Layout of the project list */
       display: flex;
@@ -38,4 +38,4 @@
       justify-content: space-between; /* Space items evenly */
       flex-wrap: wrap; /* Allows items to wrap if necessary */
     }
-</style> -->
+</style>
