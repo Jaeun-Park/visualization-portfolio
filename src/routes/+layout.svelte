@@ -20,7 +20,7 @@
 
 <nav>
   {#each pages as p}
-      <a href={base + p.url} 
+      <a href={getUrl(p)} 
           target={p.url.startsWith("http") ? "_blank" : null} 
           rel={p.url.startsWith("http") ? "noopener noreferrer" : null}
           class:current={$page.url.pathname === base + p.url}>
