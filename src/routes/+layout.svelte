@@ -3,22 +3,22 @@
     import { page, base } from '$app/stores'; // Import the base and page store
 
     let pages = [
-	    {url: "/", title: "Home"},
-	    {url: "/projects", title: "Projects"},
-	    {url: "/contact", title: "Contact"},
+        {url: "/", title: "Home"},
+        {url: "/projects", title: "Projects"},
+        {url: "/contact", title: "Contact"},
         { url: "https://github.com/Jaeun-Park", title: "Profile" }
     ];
 </script>
 
 <nav>
-    {#each pages as p}
-        <a href={p.url}
-            target={p.url.startsWith("http") ? "_blank" : null}
-            rel={p.url.startsWith("http") ? "noopener noreferrer" : null}
-            class:current={$page.url.pathname === base + p.url}>
-            {p.title}
-        </a>
-    {/each}
+  {#each pages as p}
+      <a href={base + p.url}
+          target={p.url.startsWith("http") ? "_blank" : null}
+          rel={p.url.startsWith("http") ? "noopener noreferrer" : null}
+          class:current={$page.url.pathname === base + p.url}>
+          {p.title}
+      </a>
+  {/each}
 </nav>
 
 <slot /> <!-- Render the content of the specific page -->
