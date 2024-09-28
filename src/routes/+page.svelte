@@ -5,17 +5,17 @@
     import projects from '$lib/projects.json'; // Import the project data
     import Project from "$lib/Project.svelte"; // Import the Project component
     let username = 'Jaeun-Park';
-    // let profilePromise = fetch(`https://api.github.com/users/${username}`);
+    let profilePromise = fetch(`https://api.github.com/users/${username}`);
 
-    let profilePromise = {
-    ok: true,
-    json: async () => ({
-        followers: 100,
-        following: 100,
-        public_repos: 100,
-        public_gists: 100,
-    })
-};
+//     let profilePromise = {
+//     ok: true,
+//     json: async () => ({
+//         followers: 100,
+//         following: 100,
+//         public_repos: 100,
+//         public_gists: 100,
+//     })
+// };
 </script>
 
 <svelte:head>
