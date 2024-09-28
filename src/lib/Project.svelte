@@ -1,12 +1,10 @@
 <script>
-    export let data = {}; // Define 'data' prop that will receive project info
-    export let hLevel = 2; // Set a default heading level to 2
+    export let data = {}; // 'data' prop that will receive project info
+    export let hLevel = 2; // Default heading level
 </script>
 
 <article>
-    <!-- Instead of <h2>{data.title}</h2> -->
-
-    <!-- Use svelte:element to dynamically set the heading level -->
+    <!-- svelte:element to dynamically set the heading level -->
     <svelte:element this={"h" + hLevel}>{data.title}</svelte:element>
 
     <img src="{data.image}" alt="{data.title} project image" />

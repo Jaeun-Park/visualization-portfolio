@@ -54,41 +54,41 @@ console.log("Navigation menu added to the page.");
 
 
 // Insert the color scheme switcher at the top of the body
-document.body.insertAdjacentHTML("afterbegin", `
-	<label class="color-scheme">
-		Theme:
-		<select id="color-scheme-switch">
-            <option value="auto">Automatic</option>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-		</select>
-	</label>`
-);
+// document.body.insertAdjacentHTML("afterbegin", `
+// 	<label class="color-scheme">
+// 		Theme:
+// 		<select id="color-scheme-switch">
+//             <option value="auto">Automatic</option>
+//             <option value="light">Light</option>
+//             <option value="dark">Dark</option>
+// 		</select>
+// 	</label>`
+// );
 
-// Get a reference to the <select> element
-const select = document.querySelector("#color-scheme-switch");
+// // Get a reference to the <select> element
+// const select = document.querySelector("#color-scheme-switch");
 
-// Function to apply the selected color scheme
-function setColorScheme(scheme) {
-    document.documentElement.style.setProperty("color-scheme", scheme);
-}
+// // Function to apply the selected color scheme
+// function setColorScheme(scheme) {
+//     document.documentElement.style.setProperty("color-scheme", scheme);
+// }
 
-// Load and apply the color scheme from localStorage on page load
-document.addEventListener("DOMContentLoaded", () => {
-    const savedScheme = localStorage.getItem("colorScheme") || "auto"; // Default to "auto" if nothing is saved
-    setColorScheme(savedScheme); // Apply the saved scheme
-    select.value = savedScheme; // Update the dropdown to reflect the saved scheme
-});
+// // Load and apply the color scheme from localStorage on page load
+// document.addEventListener("DOMContentLoaded", () => {
+//     const savedScheme = localStorage.getItem("colorScheme") || "auto"; // Default to "auto" if nothing is saved
+//     setColorScheme(savedScheme); // Apply the saved scheme
+//     select.value = savedScheme; // Update the dropdown to reflect the saved scheme
+// });
 
-// Attach an event listener for the input event
-select.addEventListener("input", function (event) {
-    const selectedScheme = event.target.value;
-    console.log("color scheme changed to", selectedScheme);
+// // Attach an event listener for the input event
+// select.addEventListener("input", function (event) {
+//     const selectedScheme = event.target.value;
+//     console.log("color scheme changed to", selectedScheme);
 
-    // Save the user's preference to localStorage
-    localStorage.setItem("colorScheme", selectedScheme);
+//     // Save the user's preference to localStorage
+//     localStorage.setItem("colorScheme", selectedScheme);
 
-    // Apply the selected color scheme
-    setColorScheme(selectedScheme);
-});
+//     // Apply the selected color scheme
+//     setColorScheme(selectedScheme);
+// });
  

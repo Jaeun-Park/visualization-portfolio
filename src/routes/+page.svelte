@@ -4,6 +4,18 @@
 <script>
     import projects from '$lib/projects.json'; // Import the project data
     import Project from "$lib/Project.svelte"; // Import the Project component
+    let username = 'Jaeun-Park';
+    // let profilePromise = fetch(`https://api.github.com/users/${username}`);
+
+    let profilePromise = {
+    ok: true,
+    json: async () => ({
+        followers: 100,
+        following: 100,
+        public_repos: 100,
+        public_gists: 100,
+    })
+};
 </script>
 
 <svelte:head>
@@ -31,11 +43,70 @@
     </div>
 
 
+<!-- Await block to handle the fetch request -->
+{#await profilePromise}
+<p>Loading profile data...</p>
+{:then response}
+{#await response.json()}
+    <p>Decoding data...</p>
+{:then data}
+    <!-- Displaying GitHub profile data using a grid-style description list -->
+    <div class="github-stats">
+        <h2>My GitHub Stats</h2>
+        <dl>
+            <dt>Followers</dt>
+            <dt>Following</dt>
+            <dt>Public Repositories</dt>
+            <dt>Public Gists</dt>
+
+            <dd>{data.followers}</dd>
+            <dd>{data.following}</dd>
+            <dd>{data.public_repos}</dd>
+            <dd>{data.public_gists}</dd>
+        </dl>
+    </div>
+{:catch error}
+    <p class="error">
+        Something went wrong: {error.message}
+    </p>
+{/await}
+{:catch error}
+<p class="error">
+    Something went wrong: {error.message}
+</p>
+{/await}
+
 <style>
     .projects { /* Layout of the project list */
       display: flex;
       gap: 1rem; /* Space between the project items */
       justify-content: space-between; /* Space items evenly */
       flex-wrap: wrap; /* Allows items to wrap if necessary */
+    }
+
+    .github-stats {
+        margin-top: 2rem;
+    }
+
+    .github-stats dl {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Four equal-sized columns */
+        gap: 1rem; /* Space between items */
+    }
+
+    .github-stats dt {
+        font-weight: bold;
+        grid-row: 1; /* All dt elements in the first row */
+        text-align: center;
+    }
+
+    .github-stats dd {
+        margin: 0; /* No default margin from dd */
+        grid-row: 2; /* All dd elements in the second row */
+        text-align: center;
+    }
+
+    .github-stats dl > * {
+        margin-bottom: 0.5rem;
     }
 </style>

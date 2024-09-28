@@ -1,62 +1,74 @@
 [
     {
-        "title": "Lorem ipsum dolor sit.",
-        "image": "images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima autem distinctio provident assumenda deleniti. Eos, ipsam rerum, exercitationem quod ipsum porro beatae, excepturi laudantium quasi accusantium tenetur maiores unde corrupti?"
+        "title": "Visualizing the Drug Overdose in Allegheny County",
+        "year": "2024",
+        "image": "images/ExploratoryDataAnalysis.png",
+        "description": "Conducted an exploratory data analysis for a Data Visualization course at Carnegie Mellon University, examining drug overdoses, gender disparities, and the connection to smoking in Allegheny County. This report analyzes the prevalence of drugs in fatal overdoses, the impact of gender on overdose rates, and the co-occurrence of drug and smoking addictions. Findings indicate Fentanyl as the most frequently involved substance, with men experiencing significantly higher overdose rates. Additionally, the analysis explores age-related drug use patterns and geographic differences in drug overdoses versus smoking prevalence, highlighting the influence of socio-economic and environmental factors."
     },
     {
-        "title": "Aspernatur distinctio dolor soluta?",
-        "image": "images/empty.svg",
-        "description": "Magnam modi numquam, enim aut quibusdam veritatis doloremque sapiente placeat repellat id sed et corporis ut illo esse, libero quod ab accusantium accusamus ipsa blanditiis dolorem? Suscipit aliquid ex libero."
+        "title": "Commendation for Excellence in Audit and Compliance",
+        "year": "2023",
+        "image": "images/202301ChairmanCommendation.png",
+        "description": "Received commendation from the chairman of Korea Development Bank in January 2023 for excellence in audit and compliance. During this period as a Corporate Loan Manager at the Cheonan Branch, led syndication efforts with Citibank and Korea Export-Import Bank for a $200 million offshore loan supporting Hana Micron’s factory construction in Vietnam. Also provided tailored financial solutions to over 20 SME clients across industries, facilitating a $75 million policy loan and securing 5 new clients."
     },
     {
-        "title": "Et fugit neque excepturi.",
-        "image": "images/empty.svg",
-        "description": "Dolores fugiat, maiores ducimus nesciunt eveniet voluptate iure cumque deserunt quam reiciendis aperiam quaerat suscipit facilis itaque assumenda eum, numquam odio? Sint reiciendis porro at natus ex fugit eos nisi."
+        "title": "Pharmaceutical Pipeline Out-licensing Strategy Development",
+        "year": "2021",
+        "image": "images/202111OutLicensingStrategy.png",
+        "description": "Developed a strategic approach for a pharmaceutical client’s pipeline out-licensing, collaborating with a team of seven experts in technical evaluation and M&A. The strategy involved analyzing drug efficacy, safety, and competitor data, which led to successful outcomes and generated a consulting profit of $350K. Recognized with the KDB Star Award (2021) for raising consulting profit as a cross-functional team of biotech and M&A experts, issued by Korea Development Bank."
     },
     {
-        "title": "Minus quos perferendis odit!",
-        "image": "images/empty.svg",
-        "description": "Quisquam nobis aliquid quae, cum earum molestias expedita at rem deleniti impedit nam eum et ipsam sint alias doloribus magni ad accusantium totam eos aperiam cumque excepturi labore. Atque, similique!"
+        "title": "Industry Analysis, Application of AI in Drug Development by Domestic Startups",
+        "year": "2021",
+        "image": "images/202106AIDrugDevelopment.png",
+        "description": "Analyzed the application of AI in drug development, focusing on its role in enhancing R&D productivity—from literature data collection to candidate substance discovery—and its adoption across 15 business areas. This report highlights the concentration of domestic startups in early-stage drug development, alongside the growing investment in AI-driven drug development initiatives in Korea."
     },
     {
-        "title": "Ipsa harum tempora excepturi?",
-        "image": "images/empty.svg",
-        "description": "Ratione, harum earum. In earum voluptatem molestiae alias, laudantium ducimus eius pariatur aliquid rem vel inventore voluptatibus. Voluptatem fugit, totam dolor eos ratione fuga optio, consequuntur doloribus itaque quia ullam."
+        "title": "Industry Analysis: Digital Transformation of the Biopharma Cold Chain",
+        "year": "2021",
+        "image": "images/202102BiopharmaceuticalColdChain.png",
+        "description": "Analyzed the transition of biopharmaceutical cold chain logistics from traditional temperature-controlled packaging and transportation to a digital cold chain utilizing IoT, cloud computing, AI, and big data technologies. This report reviews the current growth phase of cold chain services in Korea and the expected benefits of digital transformation, including enhanced quality reliability and inventory management efficiency for logistics and pharmaceutical companies. Acted as mentor and editor for this report."
     },
     {
-        "title": "Nam, fugit ullam! Sequi.",
-        "image": "images/empty.svg",
-        "description": "Sunt porro delectus aliquam repudiandae officia modi, doloremque illo qui sint corporis laudantium culpa dolor recusandae expedita quibusdam, fugit eveniet omnis velit nam. Quia aperiam quod optio, repellendus odio ab."
+        "title": "Large-Scale Pharmaceutical Data Analysis for Market Insights",
+        "year": "2021",
+        "image": "images/202101LargeDatasetAnalysis.png",
+        "description": "Leveraged Python (Pandas, NumPy, Scikit-Learn) to conduct an in-depth analysis of large-scale datasets from global pharmaceutical companies, assessing and benchmarking domestic corporations. This analysis resulted in the identification and addition of 88 prospective clients to the existing database, enhancing market opportunities and strategic outreach."
     },
     {
-        "title": "Doloremque debitis dolores cumque.",
-        "image": "images/empty.svg",
-        "description": "At iste ipsa vitae, provident saepe deleniti? Ducimus aperiam vitae natus, dicta tempora veritatis facere dolores inventore quam, nobis reprehenderit, in omnis. Sed, temporibus ut? Doloribus ut deleniti reprehenderit reiciendis?"
+        "title": "Guiding Bio-Startups through Technology Assessment For Market Listing",
+        "year": "2020",
+        "image": "images/2020KOSDAQListing.png",
+        "description": "Consulted bio-startups through the technology assessment process for KOSDAQ market listing, resulting in 3 successful accelerated listings. Implemented business strategy and applied technical expertise to enable market entry and growth."
     },
     {
-        "title": "Iste saepe ex quia.",
-        "image": "images/empty.svg",
-        "description": "Iure commodi laudantium cum autem et, quod numquam, ipsa, ab ipsum facilis eligendi ducimus nostrum temporibus! Perferendis ullam maiores, similique ipsa excepturi deserunt nam et saepe impedit vitae nesciunt earum."
+        "title": "Industry Analysis: Advancing Dementia Research and Development Policies",
+        "year": "2020",
+        "image": "images/202008Dementia.png",
+        "description": "Analyzed industry trends in advancing dementia research and development policies. This report addresses the rising global prevalence of dementia due to rapid aging, leading to increased societal costs of dementia care. It reviews diverse dementia management and R&D policies worldwide, including Korea’s initiative by the Ministry of Health and Welfare and the Ministry of Science and ICT to invest 198.7 billion KRW over nine years starting in August 2020. A comparative analysis with dementia R&D initiatives in leading countries (U.S., U.K.) is provided to explore policy improvement strategies and establish a phased roadmap."
     },
     {
-        "title": "Deserunt, odio? Nulla, deserunt!",
-        "image": "images/empty.svg",
-        "description": "Quae excepturi dolor aliquid expedita ipsum esse delectus laborum cumque ullam. Amet vel quas tenetur rem optio? Minima deleniti totam accusantium, quas laboriosam ea itaque illum, nam consectetur porro iste?"
+        "title": "Daily COVID-19 Global Issue Reports Supporting Informed Decision-making",
+        "year": "2020",
+        "image": "images/202003DailyCOVID19Reports.png",
+        "description": "Posted daily reports on global COVID-19 issues for one month during critical times in 2020. These reports provided timely updates and insights on the evolving pandemic, supporting informed decision-making during a period of uncertainty."
     },
     {
-        "title": "Nostrum quaerat officia voluptate.",
-        "image": "images/empty.svg",
-        "description": "Dignissimos, minus rem architecto consequuntur maxime corporis odio sapiente laudantium optio consequatur impedit magnam commodi excepturi repellendus qui ipsum perspiciatis. Molestiae soluta corporis dignissimos possimus minima. Tenetur, ex laborum. Omnis."
+        "title": "Industry Analysis: Drug Development Trends of Central Nervous System Diseases",
+        "year": "2020",
+        "image": "images/2020CNSDisease.png",
+        "description": "Analyzed drug development trends in central nervous system diseases, focusing on epilepsy, multiple sclerosis, Alzheimer’s, and Parkinson’s disease. The report covers disease prevalence, current market opportunities, existing treatments, and unmet medical needs."
     },
     {
-        "title": "Perspiciatis enim impedit soluta!",
-        "image": "images/empty.svg",
-        "description": "Dolorum odio rerum maxime numquam deserunt illo soluta quisquam molestias minus quos eius ex, quidem debitis distinctio, unde consequuntur quasi expedita in animi repellat. Autem optio aliquam blanditiis temporibus rem!"
+        "title": "Industry Analysis: NRDO, a Scale-up Strategy for Domestic Bio-startups",
+        "year": "2019",
+        "image": "images/201912NRDOStrategy.png",
+        "description": "Analyzed the need for diversification of commercialization strategies in domestic bio-startups, focusing on the NRDO (No Research Development Only) model. This report explores the potential benefits of adopting the NRDO approach to enhance business efficiency and reduce development risks in the pharmaceutical sector."
     },
     {
-        "title": "Ducimus fuga voluptas saepe?",
-        "image": "images/empty.svg",
-        "description": "Dolor deserunt quos tempora totam, culpa modi placeat exercitationem. Aperiam esse soluta ea error, voluptatem eaque nihil odio cum eius nesciunt quasi veniam animi libero consectetur quaerat similique vero. Nobis?"
+        "title": "Thesis: Agri-Food Business Models Based on NFC",
+        "year": "2019",
+        "image": "images/2012Thesis.png",
+        "description": "Participated in a published thesis regarding Agri-Food Business Models Based on NFC."
     }
 ]

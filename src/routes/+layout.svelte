@@ -1,9 +1,10 @@
 <script>
-    // import { page } from '$app/stores'; // Import the page store to access the current route
-    // import { page, base } from '$app/stores'; // Import the base and page store
     import { page } from '$app/stores'; // For current route detection
     import { base } from '$app/paths';  // Base path for GitHub Pages
+    import "../style.css"; // Import the global CSS
+    import { onMount } from 'svelte';
 
+    // Navigation links
     let pages = [
         {url: "/", title: "Home"},
         {url: "/projects", title: "Projects"},
@@ -11,22 +12,46 @@
         { url: "https://github.com/Jaeun-Park", title: "Profile" }
     ];
 
-    // Function to return the correct URL
-    function getUrl(p) {
-        // If the URL starts with 'http', it's an external link, so return it as is
-        return p.url.startsWith("http") ? p.url : base + p.url;
+    // Use globalThis to get the root element safely
+    let root = globalThis?.document?.documentElement;
+
+    // Define a local variable that represents localStorage or an empty object if localStorage is not available
+    let localStorage = globalThis?.localStorage ?? {};
+
+    // Initialize color scheme
+    let colorScheme = "auto";
+    if (localStorage.colorScheme) {
+        colorScheme = localStorage.colorScheme;
     }
+
+    // Update the color scheme CSS property
+    $: {
+        root?.style.setProperty("color-scheme", colorScheme);
+        // Save the color scheme to localStorage whenever it changes
+        localStorage.colorScheme = colorScheme;
+    }
+
 </script>
 
 <nav>
   {#each pages as p}
-      <a href={getUrl(p)} 
-          target={p.url.startsWith("http") ? "_blank" : null} 
+      <a href={p.url.startsWith("http") ? p.url : base + p.url}
+          target={p.url.startsWith("http") ? "_blank" : "_self"} 
           rel={p.url.startsWith("http") ? "noopener noreferrer" : null}
           class:current={$page.url.pathname === base + p.url}>
           {p.title}
       </a>
   {/each}
+
+  <!-- Theme switcher HTML -->
+  <label class="color-scheme">
+		Theme:
+    <select bind:value={colorScheme}>
+      <option value="auto">Automatic</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+		</select>
+	</label>`
 </nav>
 
 <slot /> <!-- Render the content of the specific page -->
@@ -37,10 +62,6 @@
       margin-bottom: 1em;
       border-bottom: 1px solid var(--border-color);
     }
-  
-    /* nav ul, li {
-      display: contents;
-    } */
   
     nav a {
       flex: 1;
@@ -61,4 +82,10 @@
       background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
       padding-bottom: 0.1em;
     }
+    
+    .color-scheme {
+      margin-left: 1em;
+      align-self: center;
+    }
+
 </style>
