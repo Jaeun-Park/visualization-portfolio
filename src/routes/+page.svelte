@@ -35,7 +35,7 @@
 <p>In addition to my technical roles, I have played a key part in KDB’s recruitment initiatives, participating in the hiring process for over 280 employees. My commitment to excellence was recognized with the KDB Star Award and the Commendation by the chairman for outstanding performance and compliance.</p>
 <p>My mission has always been to connect finance and cutting-edge technological progress, driving impactful change across industries. Most recently, I am pursuing a Master of Information Systems Management at Carnegie Mellon University, specializing in Business Intelligence and Data Analytics, to sharpen my ability to interpret data and develop actionable insights. My diverse background allows me to collaborate effectively with clients, align stakeholder interests, and advance the organization's objectives through data-driven decisions.</p>
 
-<h1>Latest Projects</h1>
+<h1>Latest Projects and Achievements</h1>
     <div class="latest projects">
         {#each projects.slice(0, 3) as p}
         <Project data={p} hLevel=3 />

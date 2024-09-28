@@ -8,7 +8,9 @@
 </svelte:head>
 
 <!-- Display the project count -->
-<h1>{projects.length} Projects</h1>
+<!-- <h1>{projects.length} Projects</h1> -->
+<h1>Projects and Achievements</h1>
+
     <div class="projects">
         {#each projects as p}
         <Project data={p} />
