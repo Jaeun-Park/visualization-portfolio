@@ -4,6 +4,7 @@
 <script>
     import projects from '$lib/projects.json'; // Import the project data
     import Project from "$lib/Project.svelte"; // Import the Project component
+
     let username = 'Jaeun-Park';
     let profilePromise = fetch(`https://api.github.com/users/${username}`);
 

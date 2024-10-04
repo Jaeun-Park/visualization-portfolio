@@ -1,6 +1,8 @@
 <script>
     import projects from '$lib/projects.json'; // Import the project data
     import Project from "$lib/Project.svelte"; // Import the Project component
+    import Pie from '$lib/Pie.svelte';
+
 </script>
 
 <svelte:head>
@@ -10,6 +12,9 @@
 <!-- Display the project count -->
 <!-- <h1>{projects.length} Projects</h1> -->
 <h1>Projects and Achievements</h1>
+
+<!-- Render the Pie component -->
+<Pie />
 
     <div class="projects">
         {#each projects as p}

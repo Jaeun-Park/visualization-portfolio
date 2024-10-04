@@ -9,6 +9,7 @@
 
     <img src="{data.image}" alt="{data.title} project image" />
     <p>{data.description}</p>
+    <p>{data.year}</p>
 </article>
 
 <style>
