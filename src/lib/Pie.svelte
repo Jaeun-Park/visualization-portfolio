@@ -2,28 +2,29 @@
 <script>
     import * as d3 from 'd3';
 
-    // Define the pie data
-    let data = [
-	{ value: 1, label: "apples" },
-	{ value: 2, label: "oranges" },
-	{ value: 3, label: "mangos" },
-	{ value: 4, label: "pears" },
-	{ value: 5, label: "limes" },
-	{ value: 5, label: "cherries" }
-    ];
+    // Export `data` as a prop, so it can be passed from the parent component
+    export let data = [];
 
-    // Generate the slice data using d3.pie()
-    let sliceGenerator = d3.pie().value(d => d.value);
-    let arcData = sliceGenerator(data);
+    // Prop to keep track of the selected wedge
+    export let selectedIndex = -1;
+
+    // Reactive statement to generate the slice data using d3.pie() whenever `data` changes
+    $: sliceGenerator = d3.pie().value(d => d.value);
+    $: arcData = sliceGenerator(data);
 
     // Define the arc generator with D3
     const arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 
     // Generate the SVG path data for each arc
-    let arcs = arcData.map(d => arcGenerator(d));
+    $: arcs = arcData.map(d => arcGenerator(d));
 
     // Define colors for the arcs using a D3 color scale
     let colors = d3.scaleOrdinal(d3.schemeTableau10);
+
+    // Handle wedge click event to update selectedIndex
+    function handleWedgeClick(index) {
+    selectedIndex = selectedIndex === index ? -1 : index; // Toggle selection
+}
 
 </script>
 
@@ -32,9 +33,15 @@
     <svg viewBox="-50 -50 100 100">
 
         <!-- Iterate over arcs and render each path -->
-        {#each arcs as arc, i}
-            <path d={arc} fill={colors(i)} />
+        {#each arcs as arc, index}
+        	<path 
+                d={arc}
+                fill={ colors(index) }
+                class:selected={selectedIndex === index}
+                on:click={() => handleWedgeClick(index)}
+            />
         {/each}
+
     </svg>
 
     <!-- Add the legend below the pie chart -->
@@ -67,6 +74,29 @@
         margin-block: 2em;
         overflow: visible;          /* Do not clip shapes outside the viewBox */
     }
+
+    /* Make wedges clickable */
+    path {
+        cursor: pointer;
+	    transition: 300ms;          /* Make transitions smooth for paths */
+    }
+
+    /* Hover effect on the entire SVG when a wedge is hovered */
+    svg:has(path:hover) {
+        path:not(:hover) {
+            opacity: 50%;
+	    }
+    }
+
+    /* Highlight the selected wedge */
+    .selected {
+	    --color: oklch(60% 45% 0) !important; /* Use a distinct color to indicate selection */
+
+    	&:is(path) {
+	    	fill: var(--color);
+	    }
+    }
+
 
     /* Legend styling */
     .legend {
