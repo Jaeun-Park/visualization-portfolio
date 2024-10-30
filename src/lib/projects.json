@@ -1,9 +1,24 @@
 [
     {
+        "title": "Sweet Misconceptions: Visualizing Student Nutrition",
+        "year": "2024",
+        "image": "images/2024SweetMisconceptions.png",
+        "description": "“Sweet Misconceptions” investigates candy’s role in student nutrition, analyzing if it effectively supports energy needs for studying. Using Tableau, my team created interactive visualizations of candy sales trends and student nutritional gaps. DALL-E visuals illustrate healthier alternatives to candy, enriching our insights. The final project was published on Tableau Public, combining engaging graphics and data-driven findings to underscore the need for more sustainable, nutritious snack options for students.",
+        "url": "https://public.tableau.com/app/profile/jaeun.park/viz/Team27-SweetMisconceptions/SweetMisconceptions"
+    },
+    {
+        "title": "BestNest: A Python-Powered Web App for Finding Your Ideal City",
+        "year": "2024",
+        "image": "images/2024BestNest.png",
+        "description": "BestNest is a web application that helps users find the ideal city to live in based on personalized criteria such as cost of living, literacy rate, crime cost, and air quality. The app is structured with modularized components, including dedicated “Invoker” and “Scraper” modules for data retrieval. These modules pull and format data from online sources, which are then processed by the MergeData module to compile a unified dataset. Users select their priority factors through an interactive, multi-select interface, and the app dynamically displays a summary of the top city, a ranked list of the top 10 cities, and a heatmap visualizing city scores. This organized structure makes BestNest highly flexible and extensible for new criteria or data sources.",
+        "url": "https://bestnest.streamlit.app/"
+    },
+    {
         "title": "Visualizing the Drug Overdose in Allegheny County",
         "year": "2024",
         "image": "images/ExploratoryDataAnalysis.png",
-        "description": "Conducted an exploratory data analysis for a Data Visualization course at Carnegie Mellon University, examining drug overdoses, gender disparities, and the connection to smoking in Allegheny County. This report analyzes the prevalence of drugs in fatal overdoses, the impact of gender on overdose rates, and the co-occurrence of drug and smoking addictions. Findings indicate Fentanyl as the most frequently involved substance, with men experiencing significantly higher overdose rates. Additionally, the analysis explores age-related drug use patterns and geographic differences in drug overdoses versus smoking prevalence, highlighting the influence of socio-economic and environmental factors."
+        "description": "Conducted an exploratory data analysis for a Data Visualization course at Carnegie Mellon University, examining drug overdoses, gender disparities, and the connection to smoking in Allegheny County. This report analyzes the prevalence of drugs in fatal overdoses, the impact of gender on overdose rates, and the co-occurrence of drug and smoking addictions. Findings indicate Fentanyl as the most frequently involved substance, with men experiencing significantly higher overdose rates. Additionally, the analysis explores age-related drug use patterns and geographic differences in drug overdoses versus smoking prevalence, highlighting the influence of socio-economic and environmental factors.",
+        "url": "https://jaeun-park.github.io/portfolio/Allegheny%20County%20Drug%20Overdoses/A1_report.html"
     },
     {
         "title": "Commendation for Excellence in Audit and Compliance",

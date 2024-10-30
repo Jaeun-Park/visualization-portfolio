@@ -8,8 +8,14 @@
     <svelte:element this={"h" + hLevel}>{data.title}</svelte:element>
 
     <img src="{data.image}" alt="{data.title} project image" />
+       
+    {#if data.url}
+        <a href="{data.url}" target="_blank" rel="noopener noreferrer">View Project</a>
+    {/if}
+
     <p>{data.description}</p>
     <p>{data.year}</p>
+     
 </article>
 
 <style>
