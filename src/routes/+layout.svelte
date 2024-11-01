@@ -8,8 +8,9 @@
     let pages = [
         {url: "/", title: "Home"},
         {url: "/projects", title: "Projects"},
+        {url: "/meta", title: "Meta Analysis"},
         {url: "/contact", title: "Contact"},
-        { url: "https://github.com/Jaeun-Park", title: "Profile" }
+        {url: "https://github.com/Jaeun-Park", title: "Profile" }
     ];
 
     // Use globalThis to get the root element safely
@@ -51,7 +52,7 @@
       <option value="light">Light</option>
       <option value="dark">Dark</option>
 		</select>
-	</label>`
+	</label>
 </nav>
 
 <slot /> <!-- Render the content of the specific page -->

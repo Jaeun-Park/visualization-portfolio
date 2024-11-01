@@ -11,6 +11,7 @@ const ARE_WE_HOME = document.documentElement.classList.contains("home");
 let pages = [
     { url: "./", title: "Home" },
     { url: "projects", title: "Projects" },
+    { url: "meta", title: "Meta" },
     { url: "contact", title: "Contact" },
     { url: "https://github.com/Jaeun-Park", title: "Profile" }
 ];
@@ -34,6 +35,7 @@ for (let p of pages) {
     let a = document.createElement("a");
     a.href = url;
     a.textContent = title;
+    const nav = document.getElementById("nav");
     nav.append(a);
 
     // Check if the link matches the current page

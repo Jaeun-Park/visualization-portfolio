@@ -8,6 +8,14 @@
     // Prop to keep track of the selected wedge
     export let selectedIndex = -1;
 
+    // Function to handle wedge selection on both click and keyup
+    function toggleWedge(index, event) {
+        // Check if the key is Enter or there is no key (for mouse clicks)
+        if (!event.key || event.key === "Enter") {
+            selectedIndex = selectedIndex === index ? -1 : index; // Toggle selection
+        }
+    }
+
     // Reactive statement to generate the slice data using d3.pie() whenever `data` changes
     $: sliceGenerator = d3.pie().value(d => d.value);
     $: arcData = sliceGenerator(data);
@@ -37,8 +45,19 @@
         	<path 
                 d={arc}
                 fill={ colors(index) }
+
+                tabindex="0"
+                role="button"
+                aria-label={`Select ${data[index].label} wedge`}
+
                 class:selected={selectedIndex === index}
-                on:click={() => handleWedgeClick(index)}
+
+                style="
+                --start-angle: {arcData[index]?.startAngle}rad;
+                --end-angle: {arcData[index]?.endAngle}rad;
+                "
+                on:click={e => toggleWedge(index, e)}
+                on:keyup={e => toggleWedge(index, e)}
             />
         {/each}
 
@@ -79,6 +98,23 @@
     path {
         cursor: pointer;
 	    transition: 300ms;          /* Make transitions smooth for paths */
+
+        outline: none;
+
+        --angle: calc(var(--end-angle) - var(--start-angle));
+        --mid-angle: calc(var(--start-angle) + var(--angle) / 2);
+
+        /* Base transform to enable smooth transition */
+        transform: rotate(var(--mid-angle))
+                translateY(0)
+                rotate(calc(-1 * var(--mid-angle)));
+    }
+
+    path.selected {
+        transform: rotate(var(--mid-angle))
+                   translateY(-6px)
+                   scale(1.1)
+                   rotate(calc(-1 * var(--mid-angle)));
     }
 
     /* Hover effect on the entire SVG when a wedge is hovered */
@@ -97,6 +133,14 @@
 	    }
     }
 
+    /* Styling specifically for the selected wedge */
+    path.selected {
+        /* Move outward, enlarge slightly, and rotate to midpoint */
+        transform: rotate(var(--mid-angle))
+                   translateY(-6px)
+                   scale(1.1)
+                   rotate(calc(-1 * var(--mid-angle)));
+    }
 
     /* Legend styling */
     .legend {
