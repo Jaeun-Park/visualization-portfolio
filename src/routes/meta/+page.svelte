@@ -109,7 +109,7 @@
 
 <h1>Meta Analysis</h1>
 <p>
-    This page includes stats about the code of this website.
+    Stats about the code of this website
 </p>
 
 <!-- Display stats as a definition list -->
@@ -166,6 +166,10 @@
 </svg>
 
 <style>
+    /* Padding between elements */
+    p, h2, .stats {
+        margin-bottom: 1.5rem; /* Adds space after each element */
+    }
     /* Style the stats list as a 4-column grid */
     .stats {
         display: grid;
