@@ -88,7 +88,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* gap: 1rem; */
     }
     /* Row layout for larger screens */
     @media (min-width: 768px) {
@@ -111,7 +110,7 @@
         margin-bottom: 1rem;
     }
     .profile-container img {
-        max-width: 400px;
+        max-width: 430px;
         height: auto;
         border-radius: 8px; /* Add rounded corners */
     }
