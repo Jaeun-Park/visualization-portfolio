@@ -2,37 +2,37 @@
     {
         "title": "Project Leadership",
         "description": "Led $200MM syndicated loan for semiconductor expansion, generating $1.8MM in fees and 15x client revenue growth.",
-        "image": "/images/project-leadership.jpg",
+        "image": "images/project-leadership.jpg",
         "url": "https://biz.chosun.com/industry/company/2024/01/06/WERZZZ7RYZH2TKKH2SKPR7XIKU/"
     },
     {
         "title": "Business Problem Solving",
         "description": "Engineered Asset-Backed CP and Standby LOCs to solve cross-border financing challenges.",
-        "image": "/images/mobaseelectronics.jpg",
+        "image": "images/mobaseelectronics.jpg",
         "url": "https://www.newspim.com/news/view/20240321000112"
     },
     {
         "title": "Technology Integration",
         "description": "Translated biotech expertise into financial strategies, contributing to $1.3B Novartis licensing deal.",
-        "image": "/images/chongkundang.jpg",
+        "image": "images/chongkundang.jpg",
         "url": "https://www.mk.co.kr/en/it/11217582"
     },
     {
         "title": "Data Analytics",
         "description": "Developed ML models to assess biopharma competitiveness, yielding 22 new banking clients.",
-        "image": "/images/supplychain.png",
+        "image": "images/supplychain.png",
         "url": null
     },
     {
         "title": "Visualization Excellence",
         "description": "Secured 2nd place in CMU IronViz competition with interactive data visualizations.",
-        "image": "/images/2024SweetMisconceptions.png",
+        "image": "images/2024SweetMisconceptions.png",
         "url": "https://public.tableau.com/app/profile/jaeun.park/viz/Team27-SweetMisconceptions/SweetMisconceptions"
     },
     {
         "title": "Recognition",
         "description": "Awarded KDB Star Award for cross-functional collaboration excellence.",
-        "image": "/images/202111OutLicensingStrategy.png",
+        "image": "images/202111OutLicensingStrategy.png",
         "url": null
     }
 ]
