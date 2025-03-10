@@ -1,6 +1,7 @@
 <script>
     import projects from '$lib/projects.json'; // Import the project data
     import Project from "$lib/Project.svelte"; // Import the Project component
+    import keypoints from '$lib/keypoints.json';
 
     let username = 'Jaeun-Park';
     let profilePromise = fetch(`https://api.github.com/users/${username}`);
@@ -10,148 +11,249 @@
 	<title>Jaeun (Jan) Park</title>
 </svelte:head>
 
-<h1>Jaeun (Jan) Park</h1>
-<!-- <h3>Master’s in Business Intelligence & Data Analytics @ Carnegie Mellon University
-    <br>Corporate Relationship Manager @ Korea Development Bank</h3>
-<h4>Financial Solutions, Project Management, Client Communication, Technology Assessment</h4> -->
+<!-- Intro Section -->
+<section class="intro">
+    <h1>Data Strategist & Financial Technology Leader</h1>
 
-<div class="profile-container">
-    <div class="profile-header">
-        <div class="profile-info">
-            <h4>Master’s in Business Intelligence & Data Analytics @ CMU
-                <br>Corporate Relationship Manager @ Korea Development Bank</h4>
-            <h5>Financial Solutions, Project Management,
-                <br> Client Communication, Technology Assessment</h5>
+    <div class="profile-photo-container">
+        <!-- Left: Skills -->
+        <div class="skills-container">
+            <h2>Bridging finance and technology with data-driven solutions</h2>
+            <div class="skill-tag">Python</div>
+            <div class="skill-tag">Java</div>
+            <div class="skill-tag">SQL</div>
+            <div class="skill-tag">Project Management</div>
+            <div class="skill-tag">Data Science</div>
+            <div class="skill-tag">Machine Learning</div>
+            <div class="skill-tag">Financial and Accounting Analysis</div>
+            <div class="skill-tag">Clinical Data Analysis</div>
         </div>
-    <img src="images/profilephoto.jpg" alt="Profile Photo of Jan Park">
-    </div>
     
-    <div class="profile-details">
-        <p>With over ten years of experience at Korea Development Bank, I have built a strong foundation in client communication, industry context absorption, and leveraging data to craft tailored financial solutions.
-             As a Corporate Relationship Manager, I successfully led a $200 million syndication loan arrangement, skillfully navigating the diverse needs of clients, partner institutions, internal stakeholders, and international regulatory frameworks.</p>
-        <p>My passion for integrating financial expertise with technological innovation drove me to the role of Biotech Research Analyst. In this capacity, I conducted technology assessments and developed data-driven strategies for biotech and pharmaceutical clients. These efforts culminated in 30+ new investment partnerships, directly contributing to the bank’s growth and positioning it as a leader in biotechnology sector investment.</p>
-        <p>In addition to my technical roles, I have played a key part in KDB’s recruitment initiatives, participating in the hiring process for over 280 employees. My commitment to excellence was recognized with the KDB Star Award and the Commendation by the chairman for outstanding performance and compliance.</p>
-        <p>My mission has always been to connect finance and cutting-edge technological progress, driving impactful change across industries. Most recently, I am pursuing a Master of Information Systems Management at Carnegie Mellon University, specializing in Business Intelligence and Data Analytics, to sharpen my ability to interpret data and develop actionable insights. My diverse background allows me to collaborate effectively with clients, align stakeholder interests, and advance the organization's objectives through data-driven decisions.</p>
+        <!-- Right: Profile Photo -->
+        <img src="images/profilephoto.jpg" alt="Profile Photo of Jan Park" class="profile-photo">
     </div>
-</div>
+</section>
 
-<h1>Latest Projects and Achievements</h1>
-    <div class="latest projects">
-        {#each projects.slice(0, 3) as p}
-        <Project data={p} hLevel=3 />
+
+<!-- Keypoints Section -->
+<section id="keypoints" class="keypoints">
+    <ul class="keypoints-grid">
+        {#each keypoints as k}
+            <li class="keypoint-card">
+                <!-- Image always visible -->
+                <img src={k.image} alt={k.title} class="keypoint-image">
+
+                <!-- Hover Overlay: Covers the whole card -->
+                <div class="keypoint-hover">
+                    <h3 class="keypoint-title">{k.title}</h3>
+                    <p class="keypoint-description">{k.description}</p>
+                    {#if k.url}
+                        <a href={k.url} target="_blank" class="keypoint-link">Learn More →</a>
+                    {/if}
+                </div>
+            </li>
         {/each}
+    </ul>
+</section>
+
+
+<!-- Profile Section -->
+<section class="profile">
+    <div class="profile-title">
+        <h1>I'm Jaeun (Jan) Park, bringing 10+ years of financial expertise combined with Carnegie Mellon's data analytics education to drive innovative solutions at the intersection of finance and technology.</h1>
+        <h4 class="subtitle">MISM-BIDA @ Carnegie Mellon | Korea Development Bank</h4>
     </div>
+</section>
 
 
-<!-- Await block to handle the fetch request -->
-{#await profilePromise}
-<p>Loading profile data...</p>
-{:then response}
-{#await response.json()}
-    <p>Decoding data...</p>
-{:then data}
-    <!-- Displaying GitHub profile data using a grid-style description list -->
-    <div class="github-stats">
-        <h2>My GitHub Stats</h2>
-        <dl>
-            <dt>Followers</dt>
-            <dt>Following</dt>
-            <dt>Public Repositories</dt>
-            <dt>Public Gists</dt>
-
-            <dd>{data.followers}</dd>
-            <dd>{data.following}</dd>
-            <dd>{data.public_repos}</dd>
-            <dd>{data.public_gists}</dd>
-        </dl>
-    </div>
-{:catch error}
-    <p class="error">
-        Something went wrong: {error.message}
-    </p>
-{/await}
-{:catch error}
-<p class="error">
-    Something went wrong: {error.message}
-</p>
-{/await}
-
+<!-- Styles -->
 <style>
-    .profile-container {
-        display: flex;
-        gap: 2rem; /* Space between the image and the text */
-        align-items: center; /* Center the image and text vertically */
-        flex-direction: column; /* Stack elements vertically */
+
+    /* Intro section */
+    .intro {
+    padding: 3rem 0;
+    text-align: left;
     }
-    /* Profile header to stack .profile-info and image */
-    .profile-header {
+
+    .intro h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    }
+
+    .intro h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    max-width: 600px;
+    }
+
+    /* Profile Section */
+    .profile {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+    /* Header Layout (Profile Info + Image) */
+    .profile-header {   
+        display: grid;
+        grid-template-columns: 1fr auto; /* Text on the left, photo on the right */
+        gap: 3rem;
+        align-items: center;
+        padding: 3rem;
+    }
+    /* Align skills to the left and photo to the right */
+    .profile-photo-container {
+        /* display: flex; */
+        display: grid;
+        grid-template-columns: 1fr auto; /* Left column takes more space, right column fits image */
+        align-items: center;
+        justify-content: space-between; /* Skills on left, photo on right */
+        gap: 2rem;
+        width: 100%;
+    }
+
+    /* Ensure skills take up left space */
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        justify-content: flex-start; /* Aligns skills to the left */
+        width: 100%; /* Force it to take full space */
+    }
+
+    /* Skill Tags */
+    .skill-tag {
+        background-color: rgba(232, 62, 140, 0.15);
+        padding: 0.6rem 1.2rem;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        border: 1px solid rgba(232, 62, 140, 0.3);
+        transition: all 0.2s ease;
+    }
+
+    .skill-tag:hover {
+        background-color: rgba(232, 62, 140, 0.3);
+        transform: translateY(-2px);
+    }
+    
+
+    /* Profile Photo (Right) */
+    .profile-photo {
+        width: 300px;
+        height: 300px;
+        border-radius: 10%;
+        object-fit: cover;
+        border: 4px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .profile-photo:hover {
+        transform: scale(1.02);
+        border-color: rgba(232, 62, 140, 0.6);
+    }
+
+
+    /* Keypoints Section */
+
+    /* Keypoints Section */
+    /* Keypoints Section */
+    .keypoints {
+        text-align: center;
+        padding: 4rem 1.5rem;
+    }
+
+    /* Grid Layout */
+    .keypoints-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: auto;
+        list-style: none;
+        padding: 0;
+        align-items: stretch; /* Ensures all items stretch equally */
+    }
+
+    /* Individual Keypoint Cards */
+    .keypoint-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+        height: 320px; /* Ensures uniform height */
+        min-height: 320px; /* Prevents inconsistency */
+    }
+
+    .keypoint-card:hover {
+        transform: scale(1.02);
+    }
+
+    /* Ensure Image Fills the Card */
+    .keypoint-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures all images fit without distortion */
+        transition: filter 0.3s ease-in-out;
+    }
+
+    /* Hover Overlay */
+    .keypoint-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    /* Row layout for larger screens */
-    @media (min-width: 768px) {
-        .profile-container {
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: center;
-        }
-        .profile-header,
-        .profile-details {
-            max-width: 50%;
-        }
-        .profile-header {
-            align-items: flex-start;
-            flex-direction: column;
-        }
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        color: white;
+        text-align: center;
+        border-radius: 12px;
     }
 
-    .profile-info {
-        margin-bottom: 1rem;
-    }
-    .profile-container img {
-        max-width: 430px;
-        height: auto;
-        border-radius: 8px; /* Add rounded corners */
-    }
-    .profile-details {
-        flex: 1;
-        width: 100%;
-        max-width: 800px;
-    }
-    .profile-details p {
-        margin-bottom: 1.2rem; /* Gap between paragraphs */
-    }
-    .projects { /* Layout of the project list */
-      display: flex;
-      gap: 1rem; /* Space between the project items */
-      justify-content: space-between; /* Space items evenly */
-      flex-wrap: wrap; /* Allows items to wrap if necessary */
+    .keypoint-card:hover .keypoint-hover {
+        opacity: 1;
     }
 
-    .github-stats {
-        margin-top: 2rem;
-    }
-
-    .github-stats dl {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* Four equal-sized columns */
-        gap: 1rem; /* Space between items */
-    }
-
-    .github-stats dt {
+    /* Title, Description, and Link Centering */
+    .keypoint-title {
+        font-size: 1.4rem;
         font-weight: bold;
-        grid-row: 1; /* All dt elements in the first row */
-        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--accent-color, #ff4081);
+        margin-bottom: 10px;
     }
 
-    .github-stats dd {
-        margin: 0; /* No default margin from dd */
-        grid-row: 2; /* All dd elements in the second row */
+    .keypoint-description {
+        font-size: 1rem;
+        line-height: 1.5;
+        max-width: 80%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
         text-align: center;
+        margin-bottom: 10px;
     }
 
-    .github-stats dl > * {
-        margin-bottom: 0.5rem;
+    /* Clickable URL */
+    .keypoint-link {
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--accent-color, #ff4081);
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
     }
+
+    .keypoint-link:hover {
+        color: #ff79b0;
+    }
+
 </style>

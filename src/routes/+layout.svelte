@@ -10,8 +10,8 @@
         {url: "/projects", title: "Projects"},
         {url: "/meta", title: "Meta Analysis"},
         // {url: "/contact", title: "Contact"},
-        {url: "https://www.linkedin.com/in/jan-park", title: "Contact"},
-        {url: "https://github.com/Jaeun-Park", title: "Profile" }
+        {url: "https://www.linkedin.com/in/jan-park", title: "LinkedIn Profile"},
+        {url: "https://github.com/Jaeun-Park", title: "GitHub" }
     ];
 
     // Use globalThis to get the root element safely
