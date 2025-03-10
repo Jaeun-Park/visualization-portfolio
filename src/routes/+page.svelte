@@ -60,7 +60,7 @@
 <!-- Profile Section -->
 <section class="profile">
     <div class="profile-title">
-        <h1>I'm Jaeun (Jan) Park, bringing 10+ years of financial expertise combined with Carnegie Mellon's data analytics education to drive innovative solutions at the intersection of finance and technology.</h1>
+        <h1>I'm Jaeun (Jan) Park, bringing 10+ years of financial expertise combined with Carnegie Mellon's data analytics Master's to drive innovative solutions at the intersection of finance and technology.</h1>
         <h4 class="subtitle">MISM-BIDA @ Carnegie Mellon | Korea Development Bank</h4>
     </div>
 </section>
